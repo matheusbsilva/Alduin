@@ -46,19 +46,21 @@ let s:ctermDarkGray = "240"
 let s:ctermAlmostBlack = "235"
 
 let g:airline#themes#alduin#palette = {}
-let s:modified = { 'airline_c': [s:gui07, '', s:cterm07, '', ''] }
+let s:modified = { 'airline_c': [s:gui07, '', s:cterm07, "6", ''] }
 
+" Mudei em relação ao default
 " Normal mode
-let s:N1 = [s:gui07, s:gui0D, s:cterm07, s:cterm0D]
-let s:N2 = [s:guiWhite, s:gui01, s:ctermWhite, s:cterm01]
-let s:N3 = [s:gui02, s:guiDarkGray, s:cterm02, s:ctermDarkGray]
+let s:N1 = [s:gui07, s:gui0D, s:cterm07, s:cterm00]
+let s:N2 = [s:guiWhite, s:gui01, s:ctermAlmostBlack, "222"]
+let s:N3 = [s:gui02, s:guiDarkGray, s:cterm02, s:cterm00]
 let g:airline#themes#alduin#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
 let g:airline#themes#alduin#palette.normal_modified = s:modified
 
+" Mudei em relação ao default
 " Insert mode
-let s:I1 = [s:guiWhite, s:gui0B, s:ctermWhite, s:cterm0B]
+let s:I1 = [s:guiWhite, s:gui0B, s:ctermWhite, "93"]
 let s:I2 = s:N2
-let s:I3 = [s:guiWhite, s:gui01, s:ctermWhite, s:cterm01]
+let s:I3 = [s:guiWhite, s:gui01, s:cterm02, s:cterm00]
 let g:airline#themes#alduin#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 let g:airline#themes#alduin#palette.insert_modified = s:modified
 
